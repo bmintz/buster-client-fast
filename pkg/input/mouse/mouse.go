@@ -5,7 +5,7 @@ import (
 )
 
 func MoveMouse(x, y int) {
-	robotgo.MoveMouseSmooth(x, y, 0.5, 1.0, 0)
+	robotgo.MoveMouse(x, y)
 }
 
 func ClickMouse() {

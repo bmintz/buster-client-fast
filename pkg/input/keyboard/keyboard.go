@@ -4,14 +4,11 @@ import (
 	"fmt"
 
 	"github.com/go-vgo/robotgo"
-
-	"buster-client/pkg/input/utils"
 )
 
 func TypeText(text string) {
 	for _, char := range text {
 		robotgo.TypeStr(fmt.Sprintf("%c", char))
-		utils.RandSleep(60, 80)
 	}
 }
 
@@ -25,8 +22,6 @@ func ReleaseKey(key string) {
 
 func TapKey(key string) {
 	PressKey(key)
-
-	utils.RandSleep(35, 40)
 
 	ReleaseKey(key)
 }
